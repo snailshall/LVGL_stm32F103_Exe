@@ -1,0 +1,12 @@
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\lv_debug.c
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\lv_debug.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\../lv_conf_internal.h
+..\..\output\lv_debug.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\../lv_conf_kconfig.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\../../../lv_conf.h
+..\..\output\lv_debug.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\lv_mem.h
+..\..\output\lv_debug.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\lv_log.h
+..\..\output\lv_debug.o: ..\..\User\gui\src\lv_misc\lv_types.h
+..\..\output\lv_debug.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
