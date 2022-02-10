@@ -1,0 +1,9 @@
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_tlsf.c
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\../lv_conf_internal.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\../lv_conf_kconfig.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\../../../lv_conf.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_tlsf.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_mem.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_types.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_log.h
+.\build\LVGL\__\User\lvgl\src\misc\lv_tlsf.o: .\..\User\lvgl\src\misc\lv_assert.h

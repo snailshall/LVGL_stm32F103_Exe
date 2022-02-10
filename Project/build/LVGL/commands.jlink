@@ -1,0 +1,6 @@
+r
+halt
+loadfile "d:\LVGL_stm32F103_Exe\Project\build\LVGL\Project.hex"
+r
+go
+exit

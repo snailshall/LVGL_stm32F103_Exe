@@ -1,0 +1,12 @@
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\lv_font.c
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\lv_font.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../lv_conf_internal.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../lv_conf_kconfig.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../../../lv_conf.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\lv_symbol_def.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_area.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_utils.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_log.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_types.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_assert.h
+.\build\LVGL\__\User\lvgl\src\font\lv_font.o: .\..\User\lvgl\src\font\../misc/lv_mem.h

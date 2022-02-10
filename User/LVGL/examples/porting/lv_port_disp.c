@@ -10,7 +10,7 @@
  *      INCLUDES
  *********************/
 #include "lv_port_disp.h"
-#include "../../lvgl.h"
+#include "lvgl.h"
 
 /*********************
  *      DEFINES
@@ -51,6 +51,7 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 
 void lv_port_disp_init(void)
 {
+	lv_disp_t * disp;
     /*-------------------------
      * Initialize your display
      * -----------------------*/
@@ -87,8 +88,8 @@ void lv_port_disp_init(void)
 #if BUFFER_METHOD == 0
     /* Example for 1) */
     static lv_disp_draw_buf_t draw_buf_dsc_1;
-    static lv_color_t buf_1[MY_DISP_HOR_RES * 40];                          /*A buffer for 40 rows*/
-    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, MY_DISP_HOR_RES * 40);   /*Initialize the display buffer*/
+    static lv_color_t buf_1[MY_DISP_HOR_RES * 30];                          /*A buffer for 40 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, MY_DISP_HOR_RES * 30);   /*Initialize the display buffer*/
 #elif BUFFER_METHOD == 1
     /* Example for 2) */
     static lv_disp_draw_buf_t draw_buf_dsc_2;
@@ -130,7 +131,8 @@ void lv_port_disp_init(void)
     //disp_drv.gpu_fill_cb = gpu_fill;
 
     /*Finally register the driver*/
-    lv_disp_drv_register(&disp_drv);
+   disp = lv_disp_drv_register(&disp_drv);
+	 lv_disp_set_bg_color(disp, lv_palette_main(LV_PALETTE_YELLOW));
 }
 
 /**********************

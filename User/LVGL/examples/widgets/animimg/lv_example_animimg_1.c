@@ -1,4 +1,5 @@
 #include "../../lv_examples.h"
+#include "lv_animimg.h"
 #if LV_USE_ANIMIMG && LV_BUILD_EXAMPLES
 LV_IMG_DECLARE(animimg001)
 LV_IMG_DECLARE(animimg002)
@@ -15,7 +16,7 @@ void lv_example_animimg_1(void)
     lv_obj_t * animimg0 = lv_animimg_create(lv_scr_act());
     lv_obj_center(animimg0);
     lv_animimg_set_src(animimg0, (lv_img_dsc_t**) anim_imgs, 3);
-    lv_animimg_set_duration(animimg0, 1000);
+    lv_animimg_set_duration(animimg0, 50000);
     lv_animimg_set_repeat_count(animimg0, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(animimg0);
 }

@@ -41,7 +41,7 @@ extern "C" {
 /**********************
  *      MACROS
  **********************/
-
+void lv_example_animimg_1(void);
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif

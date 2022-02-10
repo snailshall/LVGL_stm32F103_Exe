@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{3EA6C937-6D56-413F-9B09-19B7FD23EB20}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>2022.01</BSP_VERSION>
+    <InPlaceBSPSubdir />
+    <RelativeBSPPath />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>10.3.1/10.2.90/r1</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>10.3.1/10.2.90/r1</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Libraries\CMSIS;..\User;..\Libraries\FWlib\inc;..\User\lvgl;..\User\lvgl\examples\porting;..\User\lvgl\demos\widgets;..\User\lvgl\examples\anim;..\User\lvgl\examples\widgets;..\User\lvgl\src\extra\widgets\animimg;..\User\lvgl\examples\event;..\User\lvgl\user;..\User\lvgl\examples\layouts\flex;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>flash_layout;STM32F10X_HD;USE_STDPERIPH_DRIVER;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Libraries\CMSIS;..\User;..\Libraries\FWlib\inc;..\User\lvgl;..\User\lvgl\examples\porting;..\User\lvgl\demos\widgets;..\User\lvgl\examples\anim;..\User\lvgl\examples\widgets;..\User\lvgl\src\extra\widgets\animimg;..\User\lvgl\examples\event;..\User\lvgl\user;..\User\lvgl\examples\layouts\flex;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>flash_layout;STM32F10X_HD;USE_STDPERIPH_DRIVER;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\CMSIS\core_cm3.c" />
+    <ClCompile Include="..\Libraries\CMSIS\system_stm32f10x.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\misc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_adc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_bkp.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_can.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_cec.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_crc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_dac.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_dbgmcu.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_dma.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_exti.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_flash.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_fsmc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_gpio.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_i2c.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_iwdg.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_pwr.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_rcc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_rtc.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_sdio.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_spi.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_tim.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_usart.c" />
+    <ClCompile Include="..\Libraries\FWlib\src\stm32f10x_wwdg.c" />
+    <ClCompile Include="..\User\main.c" />
+    <ClCompile Include="..\User\palette.c" />
+    <ClCompile Include="..\User\stm32f10x_it.c" />
+    <ClCompile Include="..\User\usart\bsp_usart.c" />
+    <ClCompile Include="..\User\lcd\bsp_ili9341_lcd.c" />
+    <ClCompile Include="..\User\lcd\bsp_xpt2046_lcd.c" />
+    <ClCompile Include="..\User\font\fonts.c" />
+    <ClCompile Include="..\User\flash\bsp_spi_flash.c" />
+    <ClCompile Include="..\User\led\bsp_led.c" />
+    <ClCompile Include="..\User\lvgl\timer.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_disp.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_event.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_group.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_indev.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_indev_scroll.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_class.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_draw.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_pos.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_scroll.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_style.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_style_gen.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_obj_tree.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_refr.c" />
+    <ClCompile Include="..\User\lvgl\src\core\lv_theme.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_arc.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_img.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_label.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_line.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_mask.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_rect.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_draw_triangle.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_img_buf.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_img_cache.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\lv_img_decoder.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_arc.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_blend.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_img.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_letter.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_line.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_polygon.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\sw\lv_draw_sw_rect.c" />
+    <ClCompile Include="..\User\lvgl\src\draw\stm32_dma2d\lv_gpu_stm32_dma2d.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\lv_extra.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\layouts\flex\lv_flex.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\layouts\grid\lv_grid.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\libs\bmp\lv_bmp.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\libs\ffmpeg\lv_ffmpeg.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\themes\basic\lv_theme_basic.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\themes\default\lv_theme_default.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\themes\mono\lv_theme_mono.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\calendar\lv_calendar.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\calendar\lv_calendar_header_arrow.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\calendar\lv_calendar_header_dropdown.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\chart\lv_chart.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\colorwheel\lv_colorwheel.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\imgbtn\lv_imgbtn.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\led\lv_led.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\list\lv_list.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\menu\lv_menu.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\meter\lv_meter.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\msgbox\lv_msgbox.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\span\lv_span.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\spinbox\lv_spinbox.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\spinner\lv_spinner.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\tabview\lv_tabview.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\tileview\lv_tileview.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\win\lv_win.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\animimg\lv_animimg.c" />
+    <ClCompile Include="..\User\lvgl\src\extra\widgets\keyboard\lv_keyboard.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_dejavu_16_persian_hebrew.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_fmt_txt.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_loader.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_8.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_10.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_12.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_12_subpx.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_14.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_16.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_18.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_20.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_22.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_24.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_26.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_28.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_28_compressed.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_30.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_32.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_34.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_36.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_38.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_40.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_42.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_44.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_46.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_montserrat_48.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_simsun_16_cjk.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_unscii_8.c" />
+    <ClCompile Include="..\User\lvgl\src\font\lv_font_unscii_16.c" />
+    <ClCompile Include="..\User\lvgl\src\hal\lv_hal_disp.c" />
+    <ClCompile Include="..\User\lvgl\src\hal\lv_hal_indev.c" />
+    <ClCompile Include="..\User\lvgl\src\hal\lv_hal_tick.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_anim.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_anim_timeline.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_area.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_async.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_bidi.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_color.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_fs.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_gc.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_ll.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_log.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_math.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_mem.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_printf.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_style.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_style_gen.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_templ.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_timer.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_tlsf.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_txt.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_txt_ap.c" />
+    <ClCompile Include="..\User\lvgl\src\misc\lv_utils.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_arc.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_bar.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_btn.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_btnmatrix.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_canvas.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_checkbox.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_dropdown.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_img.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_label.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_line.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_objx_templ.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_roller.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_slider.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_switch.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_table.c" />
+    <ClCompile Include="..\User\lvgl\src\widgets\lv_textarea.c" />
+    <ClCompile Include="..\User\lvgl\examples\porting\lv_port_disp.c" />
+    <ClCompile Include="..\User\lvgl\examples\porting\lv_port_fs.c" />
+    <ClCompile Include="..\User\lvgl\examples\porting\lv_port_indev.c" />
+    <ClCompile Include="..\User\lvgl\demos\widgets\lv_demo_widgets.c" />
+    <ClCompile Include="..\User\lvgl\demos\widgets\assets\img_clothes.c" />
+    <ClCompile Include="..\User\lvgl\demos\widgets\assets\img_demo_widgets_avatar.c" />
+    <ClCompile Include="..\User\lvgl\demos\widgets\assets\img_lvgl_logo.c" />
+    <ClCompile Include="..\User\lvgl\examples\anim\lv_example_anim_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\anim\lv_example_anim_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\anim\lv_example_anim_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\anim\lv_example_anim_timeline_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\animimg001.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\animimg002.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\animimg003.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_caret_down.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_cogwheel_alpha16.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_cogwheel_argb.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_cogwheel_chroma_keyed.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_cogwheel_indexed16.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_cogwheel_rgb.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_hand.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_skew_strip.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\img_star.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\imgbtn_left.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\imgbtn_mid.c" />
+    <ClCompile Include="..\User\lvgl\examples\assets\imgbtn_right.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\animimg\lv_example_animimg_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\event\lv_example_event_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\event\lv_example_event_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\event\lv_example_event_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_4.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_5.c" />
+    <ClCompile Include="..\User\lvgl\examples\layouts\flex\lv_example_flex_6.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\win\lv_example_win_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\label\lv_example_label_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\label\lv_example_label_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\label\lv_example_label_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\label\lv_example_label_4.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\meter\lv_example_meter_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\meter\lv_example_meter_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\meter\lv_example_meter_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\meter\lv_example_meter_4.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_4.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_5.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\bar\lv_example_bar_6.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btn\lv_example_btn_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btn\lv_example_btn_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btn\lv_example_btn_3.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btnmatrix\lv_example_btnmatrix_1.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btnmatrix\lv_example_btnmatrix_2.c" />
+    <ClCompile Include="..\User\lvgl\examples\widgets\btnmatrix\lv_example_btnmatrix_3.c" />
+    <ClCompile Include="..\User\lvgl\user\test1.c" />
+    <None Include="stm32.props" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F1xxxx\StartupFiles\startup_stm32f103xe.c" />
+    <ClInclude Include="..\Libraries\CMSIS\core_cm3.h" />
+    <ClInclude Include="..\Libraries\CMSIS\stm32f10x.h" />
+    <ClInclude Include="..\Libraries\CMSIS\system_stm32f10x.h" />
+    <None Include="..\Doc\readme.txt" />
+    <ClInclude Include="..\User\lv_conf.h" />
+    <None Include="BH-F103-Debug.vgdbsettings" />
+    <None Include="BH-F103-Release.vgdbsettings" />
+    <None Include="stm32.xml" />
+  </ItemGroup>
+</Project>

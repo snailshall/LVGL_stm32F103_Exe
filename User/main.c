@@ -26,40 +26,29 @@
 
 #include "timer.h"
 #include "lvgl.h"
-#include "porting/lv_port_disp.h"
-#include "porting/lv_port_indev.h"
+#include "lv_port_disp.h"
+#include "lv_port_indev.h"
+
+
+#define LV_USE_example1 	0x1u
+#define LV_USE_example2	 	0x2u
+#define LV_USE_example3 	0x4u
+#define LV_USE_example4 	0x8u
+#define LV_USE_example5 	0x10u
+#define LV_USE_example6 	0x20u
+#define LV_USE_example  	LV_USE_example4// 使用Touchpad 
+
+
 
 #define LVGL_TICK 	5
 
-//static void btn_event_cb(lv_obj_t * btn, lv_event_t event)
-//{
-//    if (event == LV_EVENT_CLICKED) {
-//        static uint8_t cnt = 0;
-//        cnt++;
 
-//        /*Get the first child of the button which is the label and change its text*/
-//        lv_obj_t * label = lv_obj_get_child(btn, NULL);
-//        lv_label_set_text_fmt(label, "Button: %d", cnt);
-//    }
-//}
-
-//void lvgl_first_demo_start(void)
-//{
-//    lv_obj_t * btn = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
-//    lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
-//    lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
-//  //  lv_obj_set_event_cb(btn, btn_event_cb);                 /*Assign a callback to the button*/
-
-//    lv_obj_t * label = lv_label_create(btn);          /*Add a label to the button*/
-//    lv_label_set_text(label, "Yeah");                       /*Set the labels text*/
-
-
-//    lv_obj_t * label1 = lv_label_create(lv_scr_act());
-//    lv_label_set_text(label1, "Hello world!"); 
-//    lv_obj_align(label1, LV_ALIGN_CENTER, 0, 0);
-//    lv_obj_align(btn,  LV_ALIGN_OUT_TOP_MID, 0, -10);
-//}
 #include "lv_demo_widgets.h"
+#include "lv_example_anim.h"
+#include "lv_example_widgets.h"
+#include "lv_example_event.h"
+#include "test1.h"
+#include "lv_example_flex.h"
 int main(void)
 {
     TIM3_Config(999, 71);
@@ -89,16 +78,103 @@ int main(void)
     lv_port_disp_init();
     lv_port_indev_init();
 
-    //lvgl_first_demo_start();
-    lv_demo_widgets(); 
-		
-//     lv_obj_t * tab_btns;
-//		 tab_btns = lv_scr_act();
-//       lv_obj_t * label = lv_label_create(tab_btns);
-//        lv_label_set_text(label, "LVGL v8");
-//        lv_obj_center(label);
+ //   lv_demo_widgets(); 
+	//	lv_example_animimg_1();
 
-    
+//#if ( LV_USE_example & LV_USE_example1 ) == LV_USE_example1
+//			lv_example_anim_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example2 ) == LV_USE_example2
+//			lv_example_anim_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example3 ) == LV_USE_example3
+//			lv_example_anim_3();
+//#endif
+//#if ( LV_USE_example & LV_USE_example4 ) == LV_USE_example4
+//			lv_example_anim_timeline_1();
+//#endif
+
+
+
+//#if ( LV_USE_example & LV_USE_example1 ) == LV_USE_example1
+//			lv_example_event_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example2 ) == LV_USE_example2
+//			lv_example_event_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example3 ) == LV_USE_example3
+//			lv_example_event_3();
+//#endif
+
+
+//#if ( LV_USE_example & LV_USE_example1 ) == LV_USE_example1
+//			lv_example_flex_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example2 ) == LV_USE_example2
+//			lv_example_flex_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example3 ) == LV_USE_example3
+//			lv_example_flex_3();
+//#endif
+//#if ( LV_USE_example & LV_USE_example4 ) == LV_USE_example4
+//			lv_example_flex_4();
+//#endif
+//#if ( LV_USE_example & LV_USE_example5 ) == LV_USE_example6
+//			lv_example_flex_5();
+//#endif
+//#if ( LV_USE_example & LV_USE_example6 ) == LV_USE_example6
+//			lv_example_flex_6();
+//#endif
+//
+
+//#if ( LV_USE_example & LV_USE_example1 ) == LV_USE_example1
+//			lv_example_meter_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example2 ) == LV_USE_example2
+//			lv_example_meter_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example3 ) == LV_USE_example3
+//			lv_example_meter_3();
+//#endif
+//#if ( LV_USE_example & LV_USE_example4 ) == LV_USE_example4
+//			lv_example_meter_4();
+//#endif
+
+
+//#if ( LV_USE_example & LV_USE_example1 ) == LV_USE_example1
+//			lv_example_btn_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example2 ) == LV_USE_example2
+//			lv_example_btn_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example3 ) == LV_USE_example3
+//			lv_example_btn_3();
+//#endif
+//#if ( LV_USE_example & LV_USE_example4 ) == LV_USE_example4
+//			lv_example_btnmatrix_1();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example5 ) == LV_USE_example5
+//			lv_example_btnmatrix_2();
+//#endif
+
+//#if ( LV_USE_example & LV_USE_example6 ) == LV_USE_example6
+//			lv_example_btnmatrix_3();
+//#endif
+
+lv_example_test();
+
+//lv_example_win_1();
     //绘制触摸画板界面
     //Palette_Init(LCD_SCAN_MODE);
     

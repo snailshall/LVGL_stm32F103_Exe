@@ -1,0 +1,6 @@
+objcopy.exe --update-section ER_IROM1="d:\LVGL_stm32F103_Exe\Project\build\LVGL\Project.bin" "d:\LVGL_stm32F103_Exe\Project\build\LVGL\Project.axf" "d:\LVGL_stm32F103_Exe\Project\build\LVGL\Project.elf"
+
+objcopy.exe: d:\LVGL_stm32F103_Exe\Project\build\LVGL\Project.elf: warning: allocated section `RW_IRAM1' not in segment
+
+WARNING: The runtime version supported by this application is unavailable.
+Using default runtime: v4.0.30319
